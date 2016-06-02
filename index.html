@@ -77,7 +77,7 @@
 						<li>Links</li>
 						
 						
-						<li>About</li>
+						<li>Über</li>
 						
 					</ul>
 				</div>
@@ -252,31 +252,21 @@
 <p>安装hexo</p>
 </blockquote>
 <h3 id="首先呢我们需要创建一个文件夹，用来存放hexo的配置文件："><a href="#首先呢我们需要创建一个文件夹，用来存放hexo的配置文件：" class="headerlink" title="首先呢我们需要创建一个文件夹，用来存放hexo的配置文件："></a>首先呢我们需要创建一个文件夹，用来存放hexo的配置文件：</h3><blockquote>
-<blockquote>
 <p>mkdir blog<br>cd blog</p>
 </blockquote>
-</blockquote>
 <h3 id="安装hexo（切记要在你所创建的文件夹内（如我创建的blog）执行安装）："><a href="#安装hexo（切记要在你所创建的文件夹内（如我创建的blog）执行安装）：" class="headerlink" title="安装hexo（切记要在你所创建的文件夹内（如我创建的blog）执行安装）："></a>安装hexo（切记要在你所创建的文件夹内（如我创建的blog）执行安装）：</h3><blockquote>
-<blockquote>
 <p>sudo npm install -g hexo<br>之前不使用sudo的话根本下载不下来</p>
 </blockquote>
-</blockquote>
 <h3 id="初始化hexo："><a href="#初始化hexo：" class="headerlink" title="初始化hexo："></a>初始化hexo：</h3><blockquote>
-<blockquote>
 <p>hexo init</p>
-</blockquote>
 </blockquote>
 <p>初始化完毕后整个hexo就搭建完成了。是不是觉得很简单，同时也很纳闷看我这么多废话就只执行了这几句命令就行了？ NoNoNo,这只是初始化好了而已，接下来带你们撸一发操作！</p>
 <h3 id="生成静态页面"><a href="#生成静态页面" class="headerlink" title="生成静态页面"></a>生成静态页面</h3><blockquote>
-<blockquote>
 <p>hexo generate</p>
-</blockquote>
 </blockquote>
 <p>该命令是把项目中所有的md文件生成静态页面，也可以用 hexo g 简写来生成静态页面。<strong>切记，所有的操作都必须在blog文件夹总执行。</strong></p>
 <h3 id="启动本地服务"><a href="#启动本地服务" class="headerlink" title="启动本地服务"></a>启动本地服务</h3><blockquote>
-<blockquote>
 <p>hexo server</p>
-</blockquote>
 </blockquote>
 <p>这个命令呢就是在本地运行并打开一个端口给我们本地调试预览，可以运行看看你写得究竟怎么样。<strong>看网上教程说需要配置环境变量才能运行，可我自己什么都没配也可以运行。不知道大伙你们有没遇到。</strong></p>
 <blockquote>
@@ -284,15 +274,11 @@
 </blockquote>
 <p>既然hexo本地可以可以运行，那么我们就开始着手如何部署到外网去。<br>至于如何申请Github pages,请查看这里: <a href="http://jingyan.baidu.com/article/ed2a5d1f3732cb09f7be1745.html" target="_blank" rel="external">如何搭建Github pages</a><br>首先我们需要跟Github关联起来，在blog文件夹中可以看到有一个 <strong>_config.yml</strong>文件，使用vim打开翻到最底部可以看到：<br>deploy:<br>type:<br><strong><em>补全成以下样子(切记冒号后要打上空格)</em></strong><br>deploy:<br>type: git<br>repo: <a href="https://github.com/jousts/jousts.github.io.git" target="_blank" rel="external">https://github.com/jousts/jousts.github.io.git</a><br>branch: master<br><strong>然后执行以下命令：</strong></p>
 <blockquote>
-<blockquote>
 <p>npm install hexo-deployer-git –save</p>
-</blockquote>
 </blockquote>
 <p><strong>最后一步：</strong></p>
 <blockquote>
-<blockquote>
 <p>hexo deploy</p>
-</blockquote>
 </blockquote>
 <p>Ok,大功告成。现在已经成功地部署到Github上了。小伙伴们可以在浏览器上输入 <a href="http://XXXX/XXXX.github.io" target="_blank" rel="external">http://XXXX/XXXX.github.io</a> 来看自己的成功了！！！（注意：这里是以我的角度去操作的，你们只需要把XXXX部分更换成你们的github用户名部分）  </p>
 <blockquote>
@@ -300,28 +286,23 @@
 </blockquote>
 <p>虽然原生的hexo主题也挺不错的，但是我们总是想最求更好看、更简洁的主题。而hexo可以满足你这一点。好比如我现在在用的这款主题是<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">yilia</a>，喜欢它的简约大气，而修改主题只需要下载主题，然后配置文件中修改主题名就行了。是不是简单易操作！！！</p>
 <blockquote>
-<blockquote>
 <p>git clone <a href="http://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">http://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</p>
-</blockquote>
 </blockquote>
 <p>下载hexo-theme-yilia项目到blog/themes/yilia 文件夹中。<br>下载好yilia后我们修改_config.yml文件中的theme属性：</p>
 <blockquote>
-<blockquote>
 <p>theme: yilia</p>
-</blockquote>
 </blockquote>
 <p>更新配置到github上：</p>
 <blockquote>
-<blockquote>
 <p>hexo g 部署<br>hexo d 提交</p>
-</blockquote>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h1></blockquote>
 <p>其实只要是不熟成功过，那么我们接下来的每一次部署都只是重复三个动作：</p>
 <blockquote>
 <blockquote>
-<p>hexo clean<br>hexo generate<br>hexo deploy<br>好了，hexo 入门基本操作就已经在这里了。还想深入研究的话可以google去查一下hexo的命令操作哦。  </p>
+<p>hexo clean<br>hexo generate<br>hexo deploy</p>
 </blockquote>
 </blockquote>
+<p>好了，hexo 入门基本操作就已经在这里了。还想深入研究的话可以google去查一下hexo的命令操作哦。  </p>
 <p>第一次写博客，略笨戳。有什么不对的地方还希望大伙多多包涵。谢谢</p>
 
       
