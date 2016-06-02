@@ -16,7 +16,7 @@
 <meta property="og:description" content="任何成就都是从决定尝试开始
 
 记得刚毕业那会经常混迹于博客园、CSDN之类的技术型网站，也一直想要给自己开通一个博客来记录自己所学知识。一方面可以自我总结，通过自己的角度来描述所学的知识是验证自己是否吃透此知识点的一个标杆；另一方面呢则是想借此训练自己的写作能力和表达能力，毕竟现在不是单打独斗的时代，团队意识要好，交流沟通是最总要的。如果表达不精准会影响整个项目的进度！哈哈，发了这么多牢骚，看官">
-<meta property="og:updated_time" content="2016-06-02T12:54:01.000Z">
+<meta property="og:updated_time" content="2016-06-02T13:01:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用Github+Hexo搭建属于自己的个人博客">
 <meta name="twitter:description" content="任何成就都是从决定尝试开始
@@ -84,7 +84,7 @@
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -245,17 +245,17 @@
 </blockquote>
 <p>在搭建hexo之前呢需要先准备一些工具，如下：</p>
 <ol>
-<li><p>git&gt; 这个主要是为了把本地hexo的代码提交到github上面。</p>
+<li><p>git 这个主要是为了把本地hexo的代码提交到github上面。</p>
 <blockquote>
 <p>因为我是有安装过xcode的，而xcode是有自带的git的，所以，没有git的同学可以自行去app store 里搜索下载。</p>
 </blockquote>
 </li>
-<li><p>node.js&gt; 使用它来生成静态页面。</p>
+<li><p>node.js 使用它来生成静态页面。</p>
 <blockquote>
 <p>给上 <a href="http://nodejs.cn/" title="Title" target="_blank" rel="external">node.js官网</a> 链接，下载，然后一路安装搞定。</p>
 </blockquote>
 </li>
-<li><p>github帐号&gt; 因为我们是打算使用 Github pages 来搭建属于我们的个人博，我们需要对其进行提交代码到远程仓库，绑定域名，服务器之类的操作。</p>
+<li><p>github帐号 因为我们是打算使用 Github pages 来搭建属于我们的个人博，我们需要对其进行提交代码到远程仓库，绑定域名，服务器之类的操作。</p>
 </li>
 </ol>
 <p>如果你还没有github账号，那么可以通过 <a href="https://github.com/join?source=header" target="_blank" rel="external">github 官网</a> 进行申请注册。这里还需要说到的一点就是配置SSH。当然你也可以不用配置，只是每次改动自己的博客候提交到github时就需要输入帐号密码，如果你不嫌麻烦的话！至于怎么配置SSH，直接google一下一大堆。（我就不说直接百度）</p>
@@ -265,7 +265,7 @@
 </blockquote>
 <h3 id="首先呢我们需要创建一个文件夹，用来存放hexo的配置文件："><a href="#首先呢我们需要创建一个文件夹，用来存放hexo的配置文件：" class="headerlink" title="首先呢我们需要创建一个文件夹，用来存放hexo的配置文件："></a>首先呢我们需要创建一个文件夹，用来存放hexo的配置文件：</h3><blockquote>
 <blockquote>
-<p>mkdir blog<br>      cd blog</p>
+<p>mkdir blog<br>cd blog</p>
 </blockquote>
 </blockquote>
 <h3 id="安装hexo（切记要在你所创建的文件夹内（如我创建的blog）执行安装）："><a href="#安装hexo（切记要在你所创建的文件夹内（如我创建的blog）执行安装）：" class="headerlink" title="安装hexo（切记要在你所创建的文件夹内（如我创建的blog）执行安装）："></a>安装hexo（切记要在你所创建的文件夹内（如我创建的blog）执行安装）：</h3><blockquote>
@@ -294,7 +294,7 @@
 <blockquote>
 <p>Github 配置</p>
 </blockquote>
-<p>既然hexo本地可以可以运行，那么我们就开始着手如何部署到外网去。<br>至于如何申请Github pages,请查看这里: <a href="http://jingyan.baidu.com/article/ed2a5d1f3732cb09f7be1745.html" target="_blank" rel="external">如何搭建Github pages</a><br>首先我们需要跟Github关联起来，在blog文件夹中可以看到有一个 <strong> _config.yml</strong>文件，使用vim打开翻到最底部可以看到：<br>deploy:<br>type:<br><strong><em>补全成以下样子(切记冒号后要打上空格)</em></strong><br>deploy:<br>type: git<br>repo: <a href="https://github.com/jousts/jousts.github.io.git" target="_blank" rel="external">https://github.com/jousts/jousts.github.io.git</a><br>branch: master<br><strong>然后执行以下命令：</strong></p>
+<p>既然hexo本地可以可以运行，那么我们就开始着手如何部署到外网去。<br>至于如何申请Github pages,请查看这里: <a href="http://jingyan.baidu.com/article/ed2a5d1f3732cb09f7be1745.html" target="_blank" rel="external">如何搭建Github pages</a><br>首先我们需要跟Github关联起来，在blog文件夹中可以看到有一个 <strong>_config.yml</strong>文件，使用vim打开翻到最底部可以看到：<br>deploy:<br>type:<br><strong><em>补全成以下样子(切记冒号后要打上空格)</em></strong><br>deploy:<br>type: git<br>repo: <a href="https://github.com/jousts/jousts.github.io.git" target="_blank" rel="external">https://github.com/jousts/jousts.github.io.git</a><br>branch: master<br><strong>然后执行以下命令：</strong></p>
 <blockquote>
 <blockquote>
 <p>npm install hexo-deployer-git –save</p>
@@ -331,10 +331,9 @@
 <p>其实只要是不熟成功过，那么我们接下来的每一次部署都只是重复三个动作：</p>
 <blockquote>
 <blockquote>
-<p>hexo clean<br>   hexo generate<br>   hexo deploy</p>
+<p>hexo clean<br>hexo generate<br>hexo deploy<br>好了，hexo 入门基本操作就已经在这里了。还想深入研究的话可以google去查一下hexo的命令操作哦。  </p>
 </blockquote>
 </blockquote>
-<p>好了，hexo 入门基本操作就已经在这里了。还想深入研究的话可以google去查一下hexo的命令操作哦。  </p>
 <p>第一次写博客，略笨戳。有什么不对的地方还希望大伙多多包涵。谢谢</p>
 
       
